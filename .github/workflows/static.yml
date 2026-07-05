@@ -48,6 +48,9 @@ jobs:
 
       - name: Build application
         run: npm run build
+      - name: Debug base path
+        run: |
+          echo "VITE_GITHUB_PAGES_BASE=$VITE_GITHUB_PAGES_BASE"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
