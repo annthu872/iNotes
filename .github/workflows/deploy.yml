@@ -48,7 +48,9 @@ jobs:
 
       - name: Build project
         run: npm run build
-
+      - name: Show built index
+        run: |
+          cat dist/index.html
       - name: Debug base path
         run: |
           echo "VITE_GITHUB_PAGES_BASE=$VITE_GITHUB_PAGES_BASE"
